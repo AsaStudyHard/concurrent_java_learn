@@ -21,14 +21,7 @@ public class StartThreadMethod {
     }
 
     public static void testRunnable() {
-        Runnable task = new Runnable() {
-            @Override
-            public void run() {
-                log.debug("implement runnable running");
-            }
-        };
-
-        Thread t2 = new Thread(task, "t2");
+        Thread t2 = new Thread(() -> log.debug("implement runnable running"), "t2");
         t2.start();
     }
 
