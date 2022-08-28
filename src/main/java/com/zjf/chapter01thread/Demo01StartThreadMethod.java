@@ -9,7 +9,7 @@ package com.zjf.chapter01thread;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j(topic = "c.StartThreadMethod")
-public class StartThreadMethod {
+public class Demo01StartThreadMethod {
     public static void testThread() {
         Thread t1 = new Thread("t1") {
             @Override
