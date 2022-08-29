@@ -16,6 +16,12 @@ public class Demo07SleepAndYield {
 //        testSleepState();
 //        TimeUnit.SECONDS.sleep(1);
 //        testYield();
+//        testPriority();
+
+
+    }
+
+    private static void testPriority() {
         Runnable task1 = () -> {
             int count = 0;
             for (; ; ) {
@@ -36,8 +42,6 @@ public class Demo07SleepAndYield {
         t2.setPriority(Thread.MAX_PRIORITY);
         t1.start();
         t2.start();
-        
-
     }
 
     private static void testYield() {
