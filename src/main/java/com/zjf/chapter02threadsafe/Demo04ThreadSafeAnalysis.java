@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j(topic = "c.Demo04ThreadSafeAnalysis")
 public class Demo04ThreadSafeAnalysis {
@@ -31,20 +32,21 @@ public class Demo04ThreadSafeAnalysis {
 
 @Slf4j(topic = "c.ThreadUnSafe")
 class ThreadUnSafe {
-    ArrayList<Integer> arr = new ArrayList<>();
+
 
     public void IncrementAndDecrement(int loopCount) {
+        ArrayList<Integer> arr = new ArrayList<>();
         for (int i = 0; i < loopCount; ++i) {
-            increment();
-            decrement();
+            increment(arr);
+            decrement(arr);
         }
     }
 
-    private void increment() {
+    private void increment(List<Integer> arr) {
         arr.add(1);
     }
 
-    private void decrement() {
+    private void decrement(List<Integer> arr) {
         arr.remove(0);
     }
 }
