@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j(topic = "c.Demo04ThreadSafeAnalysis")
-public class Demo04ThreadSafeAnalysis {
+public class Demo03ThreadSafeAnalysis {
     public static final int THREAD_COUNT = 2;
     public static final int LOOP_COUNT = 200;
 
